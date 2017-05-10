@@ -1,7 +1,7 @@
-<div class="card-panel layout-horizontal">
-  <img src="">
+<div *ngFor="let recipe of recipes" class="card-panel layout-horizontal">
+  <img src="{{recipe.imagePath}}" class="responsive-img recipe-list-item-image">
   <div class="card-content">
-    <h5>Recipe name</h5>
-    <p>Recipe Description</p>
+    <h5>{{recipe.name}}</h5>
+    <p>{{recipe.description}}</p>
   </div>
 </div>
