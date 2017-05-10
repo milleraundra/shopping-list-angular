@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() {
     //TODO call $(".dropdown-button").dropdown(); to activate navbar dropdown
+    //TODO also return here (http://materializecss.com/navbar.html#!) to learn how to implement the hamburger menu for mobile
 
   }
 
