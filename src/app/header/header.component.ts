@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    //TODO call $(".dropdown-button").dropdown(); to activate navbar dropdown
+
+  }
 
   ngOnInit() {
   }
