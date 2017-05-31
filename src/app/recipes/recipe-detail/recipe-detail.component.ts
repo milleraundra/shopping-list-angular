@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, Input} from '@angular/core';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['recipe-detail.component.css']
 })
 export class RecipeDetailComponent implements OnInit {
+  @Input() propertyName = 'thing';
+  @Output() eventName = new EventEmitter<{name: 'string', value: {}}>();
 
   constructor() { }
 
