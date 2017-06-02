@@ -3,16 +3,16 @@
     <div class="row">
       <!-- Name input -->
       <div class="input-field col s7">
-        <input type="text" id="name">
+        <input type="text" id="name" #nameInput>
         <label for="name">Name:</label>
       </div>
       <!-- Amount input -->
       <div class="input-field col s3">
-        <input type="text" id="amount">
+        <input type="number" id="amount" #amountInput>
         <label for="amount">Amount:</label>
       </div>
     </div>
-    <button class="btn green" type="submit">Submit</button>
+    <button class="btn green" type="submit" (click)="newIngredient(nameInput.value, amountInput.value)">Submit</button>
     <button class="btn teal" type="button">Clear</button>
     <button class="btn red" type="button">Delete</button>
   </form>
