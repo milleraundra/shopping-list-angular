@@ -1,4 +1,4 @@
-<app-recipe-item
+<app-recipe-item (viewRecipe)="onViewRecipe($event)"
   *ngFor="let recipe of recipes"
   [recipe]="recipe"
   ></app-recipe-item>
