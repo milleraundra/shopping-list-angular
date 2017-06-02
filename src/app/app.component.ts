@@ -6,16 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  recipes: Boolean = true;
-  shoppingList: Boolean = false;
+  route = 'recipe';
 
-  onShowRecipes(data) {
-    this.recipes = true;
-    this.shoppingList = false;
+  setRoute(data) {
+    console.log(this.route);
+    console.log(data);
+    this.route = data;
   }
 
-  onShowShoppingList(data) {
-    this.shoppingList = true;
-    this.recipes = false;
-  }
 }

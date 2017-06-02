@@ -6,8 +6,7 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() recipesView: EventEmitter<{ recipesView: true }> = new EventEmitter();
-  @Output() shoppingListView: EventEmitter<{ shoppingListView: true }> = new EventEmitter();
+  @Output() onChangeRoute = new EventEmitter<string>();
 
   constructor() {
     //TODO call $(".dropdown-button").dropdown(); to activate navbar dropdown
@@ -16,13 +15,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {  }
 
-  showRecipes() {
-    console.log('showRecipes');
-    this.recipesView.emit({ recipesView: true });
-  }
-  showShoppingList() {
-    console.log('showShoppingList');
-    this.shoppingListView.emit({ shoppingListView: true });
+  changeRoute(route) {
+    this.onChangeRoute.emit(route);
   }
 
 }
