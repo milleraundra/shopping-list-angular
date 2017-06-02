@@ -6,11 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  route = 'recipe';
+  route: String = 'recipe';
 
   setRoute(data) {
-    console.log(this.route);
-    console.log(data);
     this.route = data;
   }
 
