@@ -1,8 +1,8 @@
-<div class="layout-vertical">
+<div class="layout-vertical" *ngIf="recipe">
   <div>
-    <img src="">
+    <img id="recipe-primary-image" [src]="recipe.imagePath">
   </div>
-  <h1>Recipe name</h1>
+  <h1>{{ recipe.name }}</h1>
 
   <!-- Dropdown Trigger -->
   <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Manage</a>
@@ -16,6 +16,6 @@
   </ul>
 
   <h5>Description:</h5>
-  <p></p>
+  <p>{{ recipe.description}}</p>
   <h5>Ingredients:</h5>
 </div>

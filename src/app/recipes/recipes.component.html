@@ -3,6 +3,6 @@
     <app-recipe-list (viewRecipe)="displayRecipe($event)"></app-recipe-list>
   </div>
   <div class="col s7">
-    <app-recipe-detail></app-recipe-detail>
+    <app-recipe-detail [recipe]="selectedRecipe"></app-recipe-detail>
   </div>
 </div>
